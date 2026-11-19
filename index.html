@@ -216,20 +216,19 @@
 <script>
   document.querySelectorAll("[data-typing]").forEach((el) => {
     const text = el.textContent.trim();
-    const words = text.split(/\s+/);
-
     el.textContent = "";
-    let index = 0;
 
-    function typeWord() {
-      if (index < words.length) {
-        el.textContent += (index === 0 ? "" : " ") + words[index];
-        index++;
-        setTimeout(typeWord, 350);
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 45);
       }
     }
 
-    typeWord();
+    type();
   });
 </script>
 </body>
