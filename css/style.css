@@ -930,3 +930,7 @@ textarea {
     transform: none;
   }
 }
+.status-online {
+  color: #23be56;
+  font-weight: 700;
+}
