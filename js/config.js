@@ -21,11 +21,11 @@ window.NXT_CONFIG = {
   /* 2. SOUNDS
      Put files in assets/sounds/ using these names. Missing files are ignored silently. */
   sounds: {
-    startup: "assets/sounds/startup.mp3",
-    click: "assets/sounds/click.mp3",
-    nav: "assets/sounds/nav.mp3",
-    menuOpen: "assets/sounds/menu-open.mp3",
-    menuClose: "assets/sounds/menu-close.mp3"
+    startup: "assets/sounds/startup.wav",
+    click: "assets/sounds/click.wav",
+    nav: "assets/sounds/nav.wav",
+    menuOpen: "assets/sounds/menu-open.wav",
+    menuClose: "assets/sounds/menu-close.wav"
   },
   soundVolume: 0.5,
 
