@@ -213,6 +213,24 @@
       <p class="footer-status">© 2026 NXT AGENCY // ALL RIGHTS RESERVED<br>STATUS: <span class="status-online">ONLINE</span> // BUILT_WITH_CARE</p>
     </div>
   </footer>
+<script>
+  document.querySelectorAll("[data-typing]").forEach((el) => {
+    const text = el.textContent.trim();
+    const words = text.split(/\s+/);
 
+    el.textContent = "";
+    let index = 0;
+
+    function typeWord() {
+      if (index < words.length) {
+        el.textContent += (index === 0 ? "" : " ") + words[index];
+        index++;
+        setTimeout(typeWord, 350);
+      }
+    }
+
+    typeWord();
+  });
+</script>
 </body>
 </html>
