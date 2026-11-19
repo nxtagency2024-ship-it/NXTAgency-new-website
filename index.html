@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <title>NXT Agency | We build what’s next.</title>
+  <meta name="description" content="NXT Agency designs, builds, hosts, maintains, and markets websites and digital systems for businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NXT Agency | We build what’s next.">
+  <meta property="og:description" content="Website design, hosting, maintenance, SEO, business automation, and digital marketing.">
+  <!-- Add a social preview image once you have one. Use a full URL, e.g. https://username.github.io/repo/assets/images/og-image.jpg -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Startup screen -->
+  <div class="startup" id="startup" role="dialog" aria-modal="true" aria-labelledby="startup-title">
+    <div class="startup-inner">
+      <p class="startup-title" id="startup-title">INITIALIZE NXT WEBSITE</p>
+      <ul class="startup-log" id="startup-log" aria-live="polite"></ul>
+      <p class="startup-sub" id="startup-sub" hidden>Click to access website and boot the system</p>
+      <button class="btn btn-primary startup-btn" id="startup-start" type="button" data-sound="startup" hidden>START SYSTEM</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="NXT Agency, back to top">
+        <img class="brand-logo" src="assets/logo/logo.svg" alt="">
+        <span class="brand-name">NXT AGENCY</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#services" data-sound="nav">Services.exe</a></li>
+          <li><a href="#portfolio" data-sound="nav">Portfolio.log</a></li>
+          <li><a href="#packages" data-sound="nav">Packages.sys</a></li>
+          <li><a href="#contact" data-sound="nav">Contact.init</a></li>
+        </ul>
+        <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="true">Sound on</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <p class="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          &gt; SYSTEM_STATUS: ONLINE
+        </p>
+        <h1>We build what’s next.</h1>
+        <p class="typing" data-typing aria-live="off">your next website starts here...</p>
+        <p class="hero-lede">
+          NXT Agency designs, builds, hosts, and grows websites and digital systems for businesses
+          that want to be found and to turn visitors into customers.
+        </p>
+        <a class="btn btn-primary btn-block" href="#contact" data-sound="click">REQUEST A QUOTE</a>
+        <a class="scroll-cue" href="#services" aria-label="Scroll to services">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="panel" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 class="panel-title" id="services-heading">&gt; SERVICES.EXE</h2>
+        <div class="stack" data-render="services"></div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="panel" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <h2 class="panel-title" id="portfolio-heading">&gt; PORTFOLIO.LOG</h2>
+        <div class="stack" data-render="projects"></div>
+      </div>
+    </section>
+
+    <!-- Why NXT -->
+    <section class="panel" id="why" aria-labelledby="why-heading">
+      <div class="container">
+        <h2 class="panel-title" id="why-heading">&gt; WORKFLOW.SYS</h2>
+        <div class="workflow">
+          <div class="workflow-step" data-reveal>
+            <p class="workflow-tag">[CLEAR SCOPE]</p>
+            <h3>Clear scope and pricing</h3>
+            <p>You see what is included before you commit to anything.</p>
+          </div>
+          <div class="workflow-step" data-reveal>
+            <p class="workflow-tag">[ONE TEAM]</p>
+            <h3>One team for the whole project</h3>
+            <p>Design, development, hosting, and marketing are handled in one place, so nothing gets lost between vendors.</p>
+          </div>
+          <div class="workflow-step" data-reveal>
+            <p class="workflow-tag">[SUPPORT]</p>
+            <h3>Support after launch</h3>
+            <p>Updates and maintenance continue once the site is live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="panel" id="packages" aria-labelledby="packages-heading">
+      <div class="container">
+        <h2 class="panel-title" id="packages-heading">&gt; PACKAGES.LOG</h2>
+        <p class="panel-note">Final pricing is confirmed in your quote.</p>
+        <div class="stack" data-render="packages"></div>
+
+        <div class="custom-quote">
+          <h3>Need something different?</h3>
+          <p>If your project doesn't fit a package, request a custom quote and we'll scope it with you.</p>
+          <a class="btn btn-secondary btn-block" href="#contact" data-package-custom>REQUEST A CUSTOM QUOTE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / quote form -->
+    <section class="panel" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="panel-title" id="contact-heading">&gt; REQUEST_QUOTE.EXE</h2>
+        <p class="panel-note">Tell us about your business and what you need. We'll reply to confirm next steps.</p>
+
+        <form class="quote-form" id="quote-form">
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full name *</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="business">Business name</label>
+              <input type="text" id="business" name="business" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Services interested in</legend>
+            <div class="check-grid" data-render="service-checkboxes"></div>
+          </fieldset>
+
+          <div class="field">
+            <label for="budget">Estimated budget</label>
+            <select id="budget" name="budget" data-render="budget-options">
+              <option value="">Choose one</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="description">Project description *</label>
+            <textarea id="description" name="description" rows="6" required
+              placeholder="What does your business do, what do you need, and when would you like to start?"></textarea>
+          </div>
+
+          <p class="package-note" id="package-note" hidden></p>
+          <input type="hidden" id="package-field" name="package" value="">
+
+          <!-- Honeypot: hidden from people, filled only by spam bots -->
+          <div class="hp" aria-hidden="true">
+            <label>Leave this field empty
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            </label>
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit" data-sound="click">SEND REQUEST</button>
+
+          <div class="form-status" id="form-status" role="status" hidden></div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-id">NXT AGENCY.SYS v1.0 // digital agency</p>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="mailto:" data-contact-email></a></li>
+      </ul>
+      <p class="footer-status">© 2026 NXT AGENCY // ALL RIGHTS RESERVED<br>STATUS: ONLINE // BUILT_WITH_CARE</p>
+    </div>
+  </footer>
+
+</body>
+</html>
