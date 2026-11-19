@@ -16,7 +16,7 @@ window.NXT_CONFIG = {
   formExtraFields: {},
 
   /* Shown on the site and in error messages. */
-  contactEmail: "[your-email@example.com]",
+  contactEmail: "team@nxtagency.net",
 
   /* 2. SOUNDS
      Put files in assets/sounds/ using these names. Missing files are ignored silently. */
