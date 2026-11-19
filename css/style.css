@@ -934,3 +934,8 @@ textarea {
   color: #23be56;
   font-weight: 700;
 }
+@media (max-width: 799px) {
+  .brand-name {
+    display: none;
+  }
+}
