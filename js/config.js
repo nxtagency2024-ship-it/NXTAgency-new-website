@@ -10,10 +10,13 @@ window.NXT_CONFIG = {
      Create a free form at https://formspree.io (or https://web3forms.com) and paste
      its endpoint below, for example "https://formspree.io/f/abcdwxyz".
      Until this is set, the form shows an error instead of pretending to send. */
-  formEndpoint: "",
+  
+/* 1. CONTACT FORM */
+formEndpoint: "https://send.webforms.to/wft_gcniic4snytfxi8y79a3",
 
-  /* Extra fields some form services need. For Web3Forms, use: { access_key: "YOUR_KEY" } */
-  formExtraFields: {},
+formExtraFields: {
+  _subject: "New NXT Agency Quote Request"
+},
 
   /* Shown on the site and in error messages. */
   contactEmail: "team@nxtagency.net",
