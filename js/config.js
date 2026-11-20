@@ -137,5 +137,5 @@ formExtraFields: {
   ],
 
   /* 7. BUDGET OPTIONS on the quote form */
-  budgetRanges: ["Not sure yet", "[Range 1]", "[Range 2]", "[Range 3]", "[Range 4]"]
+  budgetRanges: ["Not sure yet", "Under $500", "$500-1000", "$1,000 - $2,500", "$2,500+"]
 };
