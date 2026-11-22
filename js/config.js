@@ -54,9 +54,9 @@ formExtraFields: {
       description: "Custom websites designed to represent businesses professionally and generate customers."
     },
     {
-      id: "hosting",
-      title: "Website Hosting",
-      description: "Reliable website hosting and deployment services."
+      id: "render",
+      title: "3D Renders",
+      description: "Visually appealing 3D renders."
     },
     {
       id: "maintenance",
