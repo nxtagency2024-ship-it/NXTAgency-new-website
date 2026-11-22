@@ -89,7 +89,7 @@ window.NXT_CONFIG = {
       url: ""
     },
     {
-      client: "Cashedout Hats",
+      client: "RIAA Scaffold",
       image: "",
       description: "[Short project description]",
       services: ["Web Design"],
