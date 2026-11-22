@@ -90,7 +90,7 @@ window.NXT_CONFIG = {
     },
     {
       client: "RIAA Scaffold",
-      image: "assets/images/client-one.png",
+      image: "assets/images/client-two.png",
       description: "[Short project description]",
       services: ["Web Design"],
       url: "https://riaascaffold.com"
