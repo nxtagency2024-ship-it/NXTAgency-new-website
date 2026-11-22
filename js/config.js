@@ -83,24 +83,24 @@ window.NXT_CONFIG = {
   projects: [
     {
       client: "Rancho Hats",
-      image: "",
+      image: "assets/images/client-one.png",
       description: "[Short project description]",
       services: ["Web Design", "Marketing"],
-      url: ""
+      url: "https://www.ranchoclothing.com"
     },
     {
       client: "RIAA Scaffold",
-      image: "",
+      image: "assets/images/client-one.png",
       description: "[Short project description]",
       services: ["Web Design"],
-      url: ""
+      url: "https://riaascaffold.com"
     },
     {
       client: "FMB LA",
       image: "",
       description: "[Short project description]",
       services: ["Web Design", "Business Automation"],
-      url: ""
+      url: "https://fmbla.shop"
     }
   ],
 
