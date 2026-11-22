@@ -56,7 +56,7 @@ formExtraFields: {
     {
       id: "render",
       title: "3D Renders",
-      description: "Visually appealing 3D renders."
+      description: "Custom 3D visuals designed to bring concepts to life."
     },
     {
       id: "maintenance",
