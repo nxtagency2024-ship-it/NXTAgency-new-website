@@ -112,26 +112,26 @@ formExtraFields: {
   packages: [
     {
       id: "starter",
-      name: "[Package 1 name]",
-      price: "[Price]",
-      summary: "[One-line summary of who this package is for]",
-      includes: ["[Included item]", "[Included item]", "[Included item]"],
+      name: "Brand",
+      price: "[Starter]",
+      summary: "Create a brand that stands out with custom logos, designs, and visuals that represent your business.",
+      includes: "Web design", "SMS/Email Setup", "SEO",
       highlighted: false
     },
     {
       id: "growth",
-      name: "[Package 2 name]",
-      price: "[Price]",
-      summary: "[One-line summary of who this package is for]",
-      includes: ["[Included item]", "[Included item]", "[Included item]", "[Included item]"],
+      name: "Business",
+      price: "[Growth]",
+      summary: "Build your online presence with a professional website and tools that help your business reach more customers.",
+      includes: "Web design", "Marketing", "Content Creation", "Management",
       highlighted: true
     },
     {
       id: "scale",
-      name: "[Package 3 name]",
-      price: "[Price]",
-      summary: "[One-line summary of who this package is for]",
-      includes: ["[Included item]", "[Included item]", "[Included item]", "[Included item]"],
+      name: "Partnership",
+      price: "[Scale]",
+      summary: "Connect us with businesses that need our services. We handle the work, while you earn a commission for every successful referral.",
+      includes: "Web design", "Marketing", "Hosting/Maintenance", "Business Automation",
       highlighted: false
     }
   ],
