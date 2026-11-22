@@ -1,28 +1,23 @@
+
 /*
   NXT Agency site configuration.
 
   Edit this file to change content, packages, sounds, and the form connection.
   It is plain data, so no build step is needed.
 */
+
 window.NXT_CONFIG = {
 
-  /* 1. CONTACT FORM
-     Create a free form at https://formspree.io (or https://web3forms.com) and paste
-     its endpoint below, for example "https://formspree.io/f/abcdwxyz".
-     Until this is set, the form shows an error instead of pretending to send. */
-  
-/* 1. CONTACT FORM */
-formEndpoint: "https://send.webforms.to/wft_gcniic4snytfxi8y79a3",
+  /* 1. CONTACT FORM */
+  formEndpoint: "https://send.webforms.to/wft_gcniic4snytfxi8y79a3",
 
-formExtraFields: {
-  _subject: "New NXT Agency Quote Request"
-},
+  formExtraFields: {
+    _subject: "New NXT Agency Quote Request"
+  },
 
-  /* Shown on the site and in error messages. */
   contactEmail: "team@nxtagency.net",
 
-  /* 2. SOUNDS
-     Put files in assets/sounds/ using these names. Missing files are ignored silently. */
+  /* 2. SOUNDS */
   sounds: {
     startup: "assets/sounds/startup.wav",
     click: "assets/sounds/click.wav",
@@ -30,23 +25,27 @@ formExtraFields: {
     menuOpen: "assets/sounds/menu-open.wav",
     menuClose: "assets/sounds/menu-close.wav"
   },
+
   soundVolume: 0.5,
 
   /* 3. STARTUP SCREEN */
   startupTitle: "INITIALIZE NXT WEBSITE",
+
   startupSubtitle: "Click to access website and boot the system",
+
   startupLines: [
     "> INITIALIZING NXT_SYSTEM.EXE...",
     "> CONNECTING TO SERVICES_NETWORK...",
     "> CALIBRATING CREATIVE_ENGINE...",
     "> SYSTEM READY."
   ],
+
   startupLabel: "START SYSTEM",
 
-  /* Hero line that types out under the headline */
+  /* HERO TEXT */
   heroTyping: "your next website starts here...",
 
-  /* 4. SERVICES (all six) */
+  /* 4. SERVICES */
   services: [
     {
       id: "web-design",
@@ -56,7 +55,7 @@ formExtraFields: {
     {
       id: "render",
       title: "3D Renders",
-      description: "Custom 3D visuals designed to bring concepts to life."
+      description: "High-quality 3D visuals that bring your ideas and designs to life."
     },
     {
       id: "maintenance",
@@ -80,9 +79,7 @@ formExtraFields: {
     }
   ],
 
-  /* 5. PORTFOLIO
-     Replace the placeholders with real projects. Leave "image" as "" to show a placeholder box.
-     Image paths are relative, for example "assets/images/client-one.jpg". */
+  /* 5. PORTFOLIO */
   projects: [
     {
       client: "Rancho Hats",
@@ -107,35 +104,57 @@ formExtraFields: {
     }
   ],
 
-  /* 6. PACKAGES
-     Prices are placeholders until you set them. "id" is used in links, so keep it unique. */
+  /* 6. PACKAGES */
   packages: [
     {
       id: "starter",
       name: "Brand",
-      price: "[Starter]",
+      price: "Custom Quote",
       summary: "Create a brand that stands out with custom logos, designs, and visuals that represent your business.",
-      includes: "Web design", "SMS/Email Setup", "SEO",
+      includes: [
+        "Logo Design",
+        "Brand Identity",
+        "Social Media Graphics",
+        "3D Renders"
+      ],
       highlighted: false
     },
     {
       id: "growth",
       name: "Business",
-      price: "[Growth]",
+      price: "Custom Quote",
       summary: "Build your online presence with a professional website and tools that help your business reach more customers.",
-      includes: "Web design", "Marketing", "Content Creation", "Management",
+      includes: [
+        "Website Design",
+        "SEO",
+        "SMS/Email Setup",
+        "Business Automation",
+        "Website Management"
+      ],
       highlighted: true
     },
     {
       id: "scale",
       name: "Partnership",
-      price: "[Scale]",
+      price: "Commission Based",
       summary: "Connect us with businesses that need our services. We handle the work, while you earn a commission for every successful referral.",
-      includes: "Web design", "Marketing", "Hosting/Maintenance", "Business Automation",
+      includes: [
+        "Business Referrals",
+        "30% Commission",
+        "Dedicated Support",
+        "Ongoing Opportunities"
+      ],
       highlighted: false
     }
   ],
 
-  /* 7. BUDGET OPTIONS on the quote form */
-  budgetRanges: ["Not sure yet", "Under $500", "$500-1000", "$1,000 - $2,500", "$2,500+"]
+  /* 7. BUDGET OPTIONS */
+  budgetRanges: [
+    "Not sure yet",
+    "Under $500",
+    "$500 - $1,000",
+    "$1,000 - $2,500",
+    "$2,500+"
+  ]
+
 };
