@@ -259,7 +259,10 @@
     typeInto(node, text, 55);
   }
 
-  /* ---------- Startup screen (home page only) ---------- */
+  /* ---------- Startup screen (home page only) ----------
+     1. Opens on the title and START SYSTEM button.
+     2. On click, the button sound plays and the boot lines type out.
+     3. The overlay fades away and the site is shown. */
 
   function initStartup() {
     var overlay = $("#startup");
@@ -276,41 +279,45 @@
     var sub = $("#startup-sub");
     var button = $("#startup-start");
     var lines = CFG.startupLines || [];
-    var index = 0;
 
     document.documentElement.classList.add("is-startup");
     if (CFG.startupTitle) title.textContent = CFG.startupTitle;
     if (CFG.startupSubtitle) sub.textContent = CFG.startupSubtitle;
-    button.textContent = CFG.startupLabel || "Start system";
+    button.textContent = CFG.startupLabel || "START SYSTEM";
 
-    function revealButton() {
-      sub.hidden = false;
-      button.hidden = false;
-      button.focus({ preventScroll: true });
+    sub.hidden = false;
+    button.hidden = false;
+    button.focus({ preventScroll: true });
+
+    // Types the boot lines one after another, then calls done().
+    function boot(done) {
+      var index = 0;
+      (function next() {
+        if (index >= lines.length) {
+          done();
+          return;
+        }
+        var line = el("li", "startup-line");
+        log.appendChild(line);
+        typeInto(line, lines[index++], 22, function () {
+          setTimeout(next, prefersReducedMotion ? 0 : 260);
+        });
+      })();
     }
-
-    // Type one line at a time, then move to the next. Reduced motion shows them at once.
-    function nextLine() {
-      if (index >= lines.length) {
-        revealButton();
-        return;
-      }
-      var line = el("li", "startup-line");
-      log.appendChild(line);
-      var text = lines[index++];
-      typeInto(line, text, 22, function () {
-        setTimeout(nextLine, prefersReducedMotion ? 0 : 220);
-      });
-    }
-
-    nextLine();
 
     // The button carries data-sound="startup", so the global click handler plays the sound.
     button.addEventListener("click", function () {
-      overlay.classList.add("is-hidden");
-      document.documentElement.classList.remove("is-startup");
-      writeSession("nxt-started", "yes");
-      setTimeout(function () { overlay.remove(); }, prefersReducedMotion ? 0 : 700);
+      button.disabled = true;
+      overlay.classList.add("is-booting");
+
+      boot(function () {
+        setTimeout(function () {
+          overlay.classList.add("is-hidden");
+          document.documentElement.classList.remove("is-startup");
+          writeSession("nxt-started", "yes");
+          setTimeout(function () { overlay.remove(); }, prefersReducedMotion ? 0 : 700);
+        }, prefersReducedMotion ? 0 : 900);
+      });
     });
   }
 
@@ -527,6 +534,28 @@
     initReveal();
     initForm();
   }
+
+  /* ---------- Scroll to sections without leaving # in the address bar ---------- */
+
+  // Menu and page links to sections on this page: scroll to the section, then clear the #.
+  document.addEventListener("click", function (e) {
+    var link = e.target && e.target.closest && e.target.closest("a[href*='#']");
+    if (!link) return;
+
+    var url = new URL(link.href, window.location.href);
+    var samePage = url.pathname.replace(/index\.html$/, "") === window.location.pathname.replace(/index\.html$/, "");
+    if (!samePage || !url.hash) return;
+
+    var target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start"
+    });
+    history.replaceState(null, "", url.pathname);
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
