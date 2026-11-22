@@ -946,3 +946,19 @@ textarea {
   object-fit: cover;
   display: block;
 }
+/* NXT AGENCY - SQUARE PORTFOLIO IMAGES */
+.project-media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Make sure project images fill the square */
+img.project-media {
+  object-fit: cover;
+  object-position: center;
+}
