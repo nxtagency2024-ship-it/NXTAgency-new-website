@@ -84,23 +84,23 @@ window.NXT_CONFIG = {
     {
       client: "Rancho Hats",
       image: "assets/images/client-one.png",
-      description: "[Short project description]",
+      description: "[An online store showcasing hats and making it easy to shop.]",
       services: ["Web Design", "Marketing"],
       url: "https://www.ranchoclothing.com"
     },
     {
       client: "RIAA Scaffold",
       image: "assets/images/client-two.png",
-      description: "[Short project description]",
+      description: "[A website showcasing scaffolding services and making it easy to request a quote.]",
       services: ["Web Design"],
       url: "https://riaascaffold.com"
     },
     {
-      client: "FMB LA",
-      image: "",
-      description: "[Short project description]",
+      client: "MNZO Brand",
+      image: "assets/images/client-three.png",
+      description: "[An online store featuring limited drops and SMS marketing]",
       services: ["Web Design", "Business Automation"],
-      url: "https://fmbla.shop"
+      url: "https://mnzobrand.com"
     }
   ],
 
