@@ -85,24 +85,24 @@ formExtraFields: {
      Image paths are relative, for example "assets/images/client-one.jpg". */
   projects: [
     {
-      client: "[Client name]",
+      client: "Rancho Hats",
       image: "",
       description: "[Short project description]",
-      services: ["[Service]", "[Service]"],
+      services: ["Web Design", "Marketing"],
       url: ""
     },
     {
-      client: "[Client name]",
+      client: "Cashedout Hats",
       image: "",
       description: "[Short project description]",
-      services: ["[Service]"],
+      services: ["Web Design"],
       url: ""
     },
     {
-      client: "[Client name]",
+      client: "FMB LA",
       image: "",
       description: "[Short project description]",
-      services: ["[Service]", "[Service]"],
+      services: ["Web Design", "Business Automation"],
       url: ""
     }
   ],
