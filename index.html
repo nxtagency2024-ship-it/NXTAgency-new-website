@@ -178,7 +178,16 @@
               <option value="">Choose one</option>
             </select>
           </div>
-
+<div class="form-group">
+  <label for="urgency">Urgency Level</label>
+  <select id="urgency" name="urgency" required>
+    <option value="" selected disabled>SELECT URGENCY</option>
+    <option value="Critical - Need it now">CRITICAL - NEED IT NOW</option>
+    <option value="High - Within 2 weeks">HIGH - WITHIN 2 WEEKS</option>
+    <option value="Medium - This month">MEDIUM - THIS MONTH</option>
+    <option value="Low - Planning ahead">LOW - PLANNING AHEAD</option>
+  </select>
+</div>
           <div class="field">
             <label for="description">Project description *</label>
             <textarea id="description" name="description" rows="6" required
